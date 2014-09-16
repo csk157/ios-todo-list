@@ -1,5 +1,5 @@
 //
-//  CSKViewController.h
+//  CSKToDoListTableViewController.h
 //  ToDoList
 //
 //  Created by Ceslovas Lopan on 08/09/14.
@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CSKToDoItem.h"
 
-@interface CSKViewController : UIViewController <UITextFieldDelegate>
-@property CSKToDoItem *toDoItem;
+@interface CSKToDoListTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+
+
 @end

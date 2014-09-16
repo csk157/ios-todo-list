@@ -21,6 +21,8 @@
 		15D2233E19BD8820005CC65C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D2232019BD8820005CC65C /* UIKit.framework */; };
 		15D2234619BD8820005CC65C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15D2234419BD8820005CC65C /* InfoPlist.strings */; };
 		15D2234819BD8820005CC65C /* ToDoListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D2234719BD8820005CC65C /* ToDoListTests.m */; };
+		15D2235319BD8BF1005CC65C /* CSKToDoListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D2235219BD8BF1005CC65C /* CSKToDoListTableViewController.m */; };
+		15D2235819BD9132005CC65C /* CSKToDoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D2235719BD9132005CC65C /* CSKToDoItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		15D2234319BD8820005CC65C /* ToDoListTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ToDoListTests-Info.plist"; sourceTree = "<group>"; };
 		15D2234519BD8820005CC65C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		15D2234719BD8820005CC65C /* ToDoListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoListTests.m; sourceTree = "<group>"; };
+		15D2235119BD8BF1005CC65C /* CSKToDoListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSKToDoListTableViewController.h; sourceTree = "<group>"; };
+		15D2235219BD8BF1005CC65C /* CSKToDoListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSKToDoListTableViewController.m; sourceTree = "<group>"; };
+		15D2235619BD9132005CC65C /* CSKToDoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSKToDoItem.h; sourceTree = "<group>"; };
+		15D2235719BD9132005CC65C /* CSKToDoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSKToDoItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,13 +118,11 @@
 		15D2232219BD8820005CC65C /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
-				15D2232B19BD8820005CC65C /* CSKAppDelegate.h */,
-				15D2232C19BD8820005CC65C /* CSKAppDelegate.m */,
-				15D2232E19BD8820005CC65C /* Main.storyboard */,
-				15D2233119BD8820005CC65C /* CSKViewController.h */,
-				15D2233219BD8820005CC65C /* CSKViewController.m */,
+				15D2235519BD910C005CC65C /* Models */,
+				15D2235419BD90F8005CC65C /* Controllers */,
 				15D2233419BD8820005CC65C /* Images.xcassets */,
 				15D2232319BD8820005CC65C /* Supporting Files */,
+				15D2232E19BD8820005CC65C /* Main.storyboard */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -126,6 +130,8 @@
 		15D2232319BD8820005CC65C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				15D2232B19BD8820005CC65C /* CSKAppDelegate.h */,
+				15D2232C19BD8820005CC65C /* CSKAppDelegate.m */,
 				15D2232419BD8820005CC65C /* ToDoList-Info.plist */,
 				15D2232519BD8820005CC65C /* InfoPlist.strings */,
 				15D2232819BD8820005CC65C /* main.m */,
@@ -150,6 +156,26 @@
 				15D2234419BD8820005CC65C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		15D2235419BD90F8005CC65C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				15D2233119BD8820005CC65C /* CSKViewController.h */,
+				15D2233219BD8820005CC65C /* CSKViewController.m */,
+				15D2235119BD8BF1005CC65C /* CSKToDoListTableViewController.h */,
+				15D2235219BD8BF1005CC65C /* CSKToDoListTableViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		15D2235519BD910C005CC65C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				15D2235619BD9132005CC65C /* CSKToDoItem.h */,
+				15D2235719BD9132005CC65C /* CSKToDoItem.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +278,8 @@
 			files = (
 				15D2232D19BD8820005CC65C /* CSKAppDelegate.m in Sources */,
 				15D2232919BD8820005CC65C /* main.m in Sources */,
+				15D2235319BD8BF1005CC65C /* CSKToDoListTableViewController.m in Sources */,
+				15D2235819BD9132005CC65C /* CSKToDoItem.m in Sources */,
 				15D2233319BD8820005CC65C /* CSKViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

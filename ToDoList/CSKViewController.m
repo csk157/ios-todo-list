@@ -1,3 +1,4 @@
+
 //
 //  CSKViewController.m
 //  ToDoList
@@ -9,6 +10,8 @@
 #import "CSKViewController.h"
 
 @interface CSKViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *toDoItemTxt;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 
 @end
 
@@ -17,13 +20,31 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.toDoItemTxt.delegate = self;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(BOOL) validateText {
+    return self.toDoItemTxt.text.length > 0;
+}
+
+-(IBAction) returnToList:(id)sender {
+    if(sender == self.doneButton || sender == self.toDoItemTxt){
+        [self createItem];
+    }
+    [self performSegueWithIdentifier:@"unwindToList" sender:sender];
+}
+
+-(void) createItem {
+    if([self validateText]) {
+        self.toDoItem = [[CSKToDoItem alloc] init];
+        self.toDoItem.itemName = self.toDoItemTxt.text;
+        self.toDoItem.completed = NO;
+    }
+}
+
+-(BOOL) textFieldShouldReturn:(UITextField *)textField {
+    [self returnToList:textField];
+    return YES;
 }
 
 @end
